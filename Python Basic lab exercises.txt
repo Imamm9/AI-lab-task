@@ -1,0 +1,91 @@
+Python Basic lab exercises
+
+
+1.Take two integer values as input and store them in two variables named X and Y. Multiply these two values and store the result in another variable named Z. Print the values of the variables: X, Y and Z.
+Input() – is used to take input.
+Print() – is used to print a value.
+
+
+X = int(input("Enter the first integer: "))
+Y = int(input("Enter the second integer: "))
+Z = X * Y
+print("X =", X)
+print("Y =", Y)
+print("Z =", Z)
+
+2.Find and print the python version that you are using.
+Use sys.version (module sys) or platform.python_version() (module platform) to find the version.
+
+import sys
+import platform
+print("Python version (sys):", sys.version)
+print("Python version (platform):", platform.python_version())
+
+
+3.Use the Python command help('modules') to find the available built-in modules. 
+
+help('modules')
+
+4.Write a Python program to print a value without a newline or space.
+
+print("This is printed without a newline or space.", end="")
+
+5.Take an integer value as input and determine whether it is an even or odd number. Therefore, print an appropriate message (even/odd).
+
+num = int(input("Enter an integer: "))
+if num % 2 == 0:
+    print(f"{num} is an even number.")
+else:
+    print(f"{num} is an odd number.")
+
+6.Write a Python program to swap the values of two variables. Try this exercise with and without using a function.
+
+a = input("Enter the first value: ")
+b = input("Enter the second value: ")
+a, b = b, a
+print("After swapping without function:")
+print("a =", a)
+print("b =", b)
+
+def swap_values(x, y):
+    return y, x
+
+a = input("Enter the first value: ")
+b = input("Enter the second value: ")
+a, b = swap_values(a, b)
+print("After swapping with function:")
+print("a =", a)
+print("b =", b)
+
+7.Write a Python program to print all even numbers from a given list of numbers in the same order.
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print("Even numbers in the list:")
+for num in numbers:
+    if num % 2 == 0:
+        print(num)
+
+8.Take a character as input and determine whether it is a vowel or not. Therefore, print an appropriate message (vowel/not vowel).
+
+char = input("Enter a character: ").lower()
+if char in 'aeiou':
+    print(f"{char} is a vowel.")
+else:
+    print(f"{char} is not a vowel.")
+
+9.Write a Python program that accepts a filename from the user and prints the extension of the file.
+
+filename = input("Enter the filename: ")
+extension = filename.split('.')[-1]
+print("The extension of the file is:", extension)
+
+10.Write a Python program to count the number of occurrences of a specific character in a string.
+[try using count()]
+
+string = input("Enter a string: ")
+char = input("Enter the character to count: ")
+count = string.count(char)
+print(f"The character '{char}' appears {count} times in the string.")
+
+
+
