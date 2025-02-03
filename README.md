@@ -1,1 +1,1 @@
-Here you can find AI alsogirthms
+Here you can find AI algorithms
